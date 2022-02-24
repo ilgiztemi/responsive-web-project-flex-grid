@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+:root {
+    --primary-color: #79589F;
+    --secondary-color: #6e5baa;
+    --dark-color: #260040;
+    --light-color: #f4f4f4;
+    --success-color: #5cb85c;
+}
+
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 30px;
+    line-height: 25px;
+}
+h1 {
+    font-size: 30px;
+    font-weight: 300;
+}
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    color: #333;
+    font-weight: 300;
+    padding: 20px;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+/* navbar */
+
+.navbar {
+    background-color: var(--primary-color);
+    height: 70px;
+    color: var(--light-color);
+}
+.nav-items {
+    display: flex;
+    list-style-type: none;
+}
+.nav-items li {
+    padding: 20px;
+    font-weight: 300;
+}
+.nav-items a {
+    text-decoration: none;
+    color: var(--light-color);
+}
+.nav-items li:hover {
+    border-bottom: 2px solid var(--light-color);
+}
+/* showcase */
+.showcase {
+    background-color: var(--primary-color);
+    height: 400px;
+    position: relative;
+}
+.showcase::before,
+.showcase::after {
+    content: '';
+    position: absolute;
+    background-color: white;
+    height: 100px;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+    transform: skewY(-3deg);
+}
+.showcase-content,
+.showcase-form {
+    width: 40%;
+}
+.showcase-content {
+    animation: slideFromLeft 1s ease;
+}
+.showcase-content h1 {
+    margin-bottom: 20px;
+    font-size: 35px
+}
+.showcase-content p {
+    margin-bottom: 25px;
+}
+.showcase-content a {
+    text-decoration: none;
+    color: var(--light-color);
+    border: 1px solid var(--light-color);
+    padding: 10px 30px;
+    border-radius: 6px;
+    font-weight: 300;
+}
+.showcase-form {
+    position: relative;
+    height: 300px;
+    z-index: 100;
+    animation: slideFromRight 1s ease;
+}
+.showcase-formh2 {
+    margin-top: 20px;
+}
+.showcase-form input[type='text'],
+.showcase-form input[type='email'] {
+    border: none;
+    border-bottom: 1px solid var(--primary-color);
+    width: 100%;
+    font-size: 16px;
+    padding: 5px;
+}
+.form-control {
+    margin: 25px 0;
+}
+.showcase-form input:focus {
+    outline: none;
+}
+.showcase-form input[type='submit'] {
+    background-color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+    color: var(--light-color);
+    padding: 10px 25px;
+    border: none;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+.form-control:last-child {
+    margin-left: 20px;
+}
+.stats {
+    padding-top: 150px;
+}
+@keyframes slideFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }   
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideFromRight {
+    0% {
+        transform: translateX(100%);
+    }   
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideFromBottom {
+    0% {
+        transform: translateX(-100%);
+    }   
+    100% {
+        transform: translateX(0);
+    }
+}
